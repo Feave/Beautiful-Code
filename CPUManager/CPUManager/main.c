@@ -15,10 +15,10 @@
 int main(int argc, const char * argv[]) {
     struct timeval tv;
     int count = 300;
-    double busy_time[300];
-    double idle_time[300];
+    double busy_time[count];
+    double idle_time[count];
     for (int i = 0; i < count; i++) {
-        busy_time[i] = 100000*(sin(i*M_PI*2/300)+1)*0.5;
+        busy_time[i] = 100000*(sin(i*M_PI*2/count)+1)*0.5;
         idle_time[i] = 100000 - busy_time[i];
     }
     int j = 0;
